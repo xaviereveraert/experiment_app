@@ -1,0 +1,29 @@
+<h1>My contact page</h1>
+
+<form action="/contact">
+  <input type="text" name="member" placeholder="Search member">
+  <input type="Submit">
+</form>
+
+<% @members.each do |member| %>
+<p> <%= member.capitalize %> </p>
+<% end %>
+
+
+
+<!--
+explanation of the above: By iterating over the members instance variable and putting
+the @ in front of members...it fetches the instance variable from the contacts
+controller in the pages controller I created...where I have my home...abouut...contact...
+if you look at the contact controllers, you will see the array with names that I
+iterate over -->
+
+
+
+
+<%= link_to "Back to homepage", root_path %>
+<%= link_to "About us", about_path %>
+
+<!-- explanation of the above: the link_to command from ruby allows you to link as we did
+with href. As it is within our app, we just type _path at the end.
+ -->
