@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 root to: "pages#home"
 get "about", to: "pages#about"
 get "contact", to: "pages#contact"
+get "ask", to: "questions#ask"
+get "answer", to: "questions#answer"
 
 # the verb is get because we are only showing info...the url path will be about
 # and the pages routes will lead to the pages controller where the about method
