@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+/*
+ex:
+@import url("components/avatar.css");
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@100;200;300;500&display=swap');
+@import url("_questions.scss");
+@import url("colors/_colors.scss");
+
+
+
+body{
+  background: #99b898;
+}
+
+h1 {
+  font-family: Poppins;
+  color: #e84a5f;
+}
+/*
+I couldn't connect the h1 to the $red in colors.scss...rtried various links to application.css, but no luck
+*/
+
+
+
+h2, h3, h4, h5 {
+  font-family: Open-sans;
+}
+
+
+a {
+  font-weight: bold;
+}
+
+a:hover {
+  opacity: 0.8;
+  position: relative;
+             top: -1px;}
+
+
+div {
+    background: white;
+    padding: 24px;
+    margin: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    width: fit-content;
+}
+
+
