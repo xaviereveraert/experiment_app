@@ -4,7 +4,6 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-
     @question = params[:question]
     # The instance variable '@question' asks for the params specified in the 'ask'
     # url. This was directed to the answer in the form (<form action="/answer"> and
