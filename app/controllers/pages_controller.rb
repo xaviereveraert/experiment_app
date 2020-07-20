@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
 
+def home
+  @time = Date.today
+end
+
 def about
 end
 
