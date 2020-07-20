@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
 
+
 def about
 end
 
@@ -14,6 +15,7 @@ if params[:member]
 end
 
 end
+
 
 
 end
