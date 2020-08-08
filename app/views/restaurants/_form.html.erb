@@ -1,0 +1,10 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :rating %>
+  <%= f.input :address %>
+  <%= f.input :tel_nr %>
+  <%= f.submit %>
+<% end %>
+
+<!-- this is a partial file...which can be accesed in other files by rendering it
+as you see in the new and edit file of restaurant view -->

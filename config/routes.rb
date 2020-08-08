@@ -13,4 +13,12 @@ get "answer", to: "questions#answer"
 # and the pages routes will lead to the pages controller where the about method
 # wil be definded
 
+
+resources :restaurants
+# for all CRUD actions of the restaurants, we can use this method,
+# which automatically replaces all thosw steps we see above with
+# the pages controller. All crud actions are linked torestaurants
+# controller
+
+
 end
