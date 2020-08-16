@@ -8,10 +8,18 @@
 require 'faker'
 
 
+
+puts "cleaning up database"
+Restaurant.destroy_all
+puts "database is clean"
+
+puts "Creating restaurants"
+
 100.times do
   Restaurant.create(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
-    rating: rand(1..5)
+    rating: rand(1..5),
+    tel_nr: Faker::PhoneNumber.phone_number
   )
 end
