@@ -8,6 +8,17 @@ before_action :find_restaurant, only: [:show, :edit, :update, :destroy]
     @restaurants = Restaurant.all
   end
 
+  def top
+    @restaurants = Restaurant.where(rating: 5)
+  end
+
+# Above I have created a filter for those restaurants with a 5 star rating.
+# The route is within the restaurant route (collection do get top etc...)
+#   and the view is top.html.erb, where I have itterated over the restaurants
+#   variable to get the top ones
+
+
+
   def show
   end
 

@@ -14,11 +14,19 @@ get "answer", to: "questions#answer"
 # wil be definded
 
 
-resources :restaurants
+resources :restaurants do
 # for all CRUD actions of the restaurants, we can use this method,
 # which automatically replaces all thosw steps we see above with
 # the pages controller. All crud actions are linked torestaurants
 # controller
+
+collection do
+  # this is another route within the restaurant routes for those
+  # filtered top restaurants with a 5 star rating
+get :top
+end
+
+end
 
 
 end
