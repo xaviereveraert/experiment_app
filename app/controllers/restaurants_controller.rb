@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-before_action :find_restaurant, only: [:show, :edit, :update, :destroy]
+before_action :find_restaurant, only: [:show, :edit, :update, :destroy, :chef]
   # this before_action takes the method of find_restaurant that I
   # put in the private params and repeats it for the show, edit, updste and
   # destroy...this way I don't have to write it each time
@@ -10,6 +10,10 @@ before_action :find_restaurant, only: [:show, :edit, :update, :destroy]
 
   def top
     @restaurants = Restaurant.where(rating: 5)
+  end
+
+  def chef
+    @chef = @restaurant.chef
   end
 
 # Above I have created a filter for those restaurants with a 5 star rating.

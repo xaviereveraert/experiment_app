@@ -14,6 +14,9 @@ get "answer", to: "questions#answer"
 # wil be definded
 
 
+
+
+
 resources :restaurants do
 # for all CRUD actions of the restaurants, we can use this method,
 # which automatically replaces all thosw steps we see above with
@@ -21,12 +24,25 @@ resources :restaurants do
 # controller
 
 collection do
-  # this is another route within the restaurant routes for those
-  # filtered top restaurants with a 5 star rating
 get :top
 end
+  # this is another route within the restaurant routes for those
+  # filtered top restaurants with a 5 star rating
+
+member do
+get :chef
+end
+  # this is another route within the routes to go to the chef page.
+  # The difference between member and collection is that member uses
+  # the id as well...i.e: restaurants/id/chef
+
+
+resources :reviews, only: [:new, :create]
+# this is a nested route, which ties the reviews page to the restaurants
+# it also specifies that it only needs to show the new and create urls
 
 end
 
+resources :reviews, only: [:destroy]
 
 end
