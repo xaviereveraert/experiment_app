@@ -1,3 +1,7 @@
+@import "restaurants";
+@import "reviews";
+
+
 @import "bootstrap/scss/bootstrap";
 
 
@@ -7,9 +11,10 @@
 
 
 
-body{
-  background: #99b898;
-}
+
+
+
+
 
 h1 {
   font-family: Poppins;
@@ -28,12 +33,16 @@ h2, h3, h4, h5 {
 
 a {
   font-weight: bold;
-}
 
-a:hover {
+&:hover {
   opacity: 0.8;
   position: relative;
-             top: -1px;}
+             top: -1px;
+    }
+  }
+
+// the above is SCSS chaining. It's an easier way of putting an effect on something
+// and easier to read
 
 
 div {
