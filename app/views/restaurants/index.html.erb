@@ -1,9 +1,18 @@
 <h1>all the restaurants appear here!</h1>
 
+<%= image_tag "logo/Logo.png", alt: "logo", width: 140 %>
+
+
 <%= link_to 'Create a new restaurant', new_restaurant_path %>
 
-<% @restaurants.each do |restaurant| %>
-<h2> Restaurant name: <%= link_to restaurant.name, restaurant_path(restaurant) %> </h2>
-<p> rating: <%= restaurant.rating %>  address: <%= restaurant.address %> chef: <%= restaurant.chef %> </p>
-<% end %>
 
+
+
+<div class="card" style="width: 100rem;">
+  <div class="card-body">
+    <% @restaurants.each do |restaurant| %>
+    <h5 class="card-title">Restaurant name: <%= link_to restaurant.name, restaurant_path(restaurant) %> </h5>
+    <p class="card-text text-secondary">rating: <%= restaurant.rating %>  address: <%= restaurant.address %> chef: <%= restaurant.chef %> </p>
+    <% end %>
+  </div>
+</div>

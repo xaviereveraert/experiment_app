@@ -10,10 +10,11 @@
 <!-- these 2 lines are to assure that bootstrap will be responsive -->
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+<!--   </head>defer: true makes it so that Javascript loads after the html -->
 
   <body>
+    <%= render "components/navbar" %>
     <%= yield %>
     <footer>Made with love in Barcelona</footer>
   </body>

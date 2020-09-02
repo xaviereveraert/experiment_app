@@ -1,6 +1,26 @@
-<link rel="stylesheets" href="css/application.css">
+<%= image_tag "/logo/Logo.png", alt: "logo", width: "400px" %>
+
+<link rel="stylesheets" href="css/application.scss">
+
+
 
 <h1>check out my home page</h1>
 
+<h3>
+  <span id="banner-typed-text"></span>
+</h3>
+
+
+
 <p>Today's date & time is <%= @time %> </p>
 
+
+<div class="card" style="width: 50rem;">
+  <img src="https://kitt.lewagon.com/placeholder/cities/random" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="/restaurants" class="btn btn-primary">Check out my restaurants</a>
+
+  </div>
+</div>
