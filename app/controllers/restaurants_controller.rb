@@ -50,7 +50,7 @@ before_action :find_restaurant, only: [:show, :edit, :update, :destroy, :chef]
 
   def destroy
     @restaurant.destroy
-    redirect_to restaurant_path
+    redirect_to restaurants_path
   end
 
   private
