@@ -4,4 +4,5 @@ class Restaurant < ApplicationRecord
   validates :tel_nr, presence: true
   validates :rating, inclusion: { in: 1..5 }
   has_many :reviews, dependent: :destroy
+  belongs_to :user
 end
